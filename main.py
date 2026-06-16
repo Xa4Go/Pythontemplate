@@ -18,15 +18,16 @@ geraden_letters = []
 beurten=5
 fout_letters = []
 
-if beurten > 0:
+if beurten > 0 :
     print('welkom bij galgje')
-print('je hebt ' + str(beurten) + ' beurten')
-print('het woord heeft ' + str(len(woord)) + ' letters')
+    print('je hebt ' + str(beurten) + ' beurten')
+    print('het woord heeft ' + str(len(woord)) + ' letters')
+    
 
 gok = input('Geef een letter: ').lower()
 if not geldige_invoer(gok):
      print('Ongeldige invoer, Voer precies een letter in (geen cijfers of symbolen).')
-beurten = beurten - 1
+beurten = beurten 
 
 
 resultaat = ''
@@ -57,5 +58,5 @@ elif beurten == 0 and resultaat != woord:
 else:
      print('Deze letter zit niet in het woord.')
      fout_letters.append(gok)
-     beurten = beurten - 1
+     beurten = beurten 
      print('je hebt ' + str(beurten) + ' beurten')
