@@ -67,9 +67,12 @@ while beurten > 0 and "_" in woord :
         scherm_wissen()
         print('je hebt verloren het woord was ' + str(woordjes))
 
-#werkt niet
-if True:
-    opnieuw = input('Wil je nog een spel spelen? (ja/nee): ').lower()
+
+opnieuw = input('Wil je nog een spel spelen? (ja/nee): ').lower()
+if opnieuw=="ja":
+    scherm_wissen()
+    print("Goed gedaan!")
+    import main
 else:
         print('Bedankt voor het spelen van Galgje!')
         
