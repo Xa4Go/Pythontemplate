@@ -13,7 +13,7 @@ def geldige_invoer(letter):
 
 Woorden = ["informatica", "informatiekunde", "spelletje", "aardigheidje", "scholier", "fotografie", "waardebepaling", "specialiteit", "verzekering", "universiteit", "heesterperk"]
 woordjes=random.choice(Woorden) 
-woord = ['_'] * len(Woorden)
+woord = ['_'] * len(woordjes)
 geraden_letters = []
 beurten=5
 fout_letters = []
@@ -50,7 +50,9 @@ while beurten > 0 and "_" in woord :
     if gok in woordjes:
         print("\033[32mGoed geraden!\033[0m")
         geraden_letters.append(gok)
-        
+        for i, letter in enumerate(woordjes):
+            if letter == gok:
+                woord[i] = gok
         print('je hebt ' + str(beurten) + ' beurten')
         
         
